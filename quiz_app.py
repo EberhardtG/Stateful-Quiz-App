@@ -1,3 +1,15 @@
+# WHY/DESIGN:
+# This app uses Streamlit’s session_state to maintain quiz progress across reruns,
+# ensuring the current question, score, and answer status persist after each user action.
+# A single quiz selector in the sidebar controls which question set is loaded, and
+# switching quiz types resets progress to prevent mixed state. The main content area
+# dynamically renders questions, multiple‑choice options, feedback, and navigation.
+# A results screen records completed quizzes and allows restarting. Sidebar controls
+# provide clear navigation and a persistent list of finished quizzes, creating a clean,
+# predictable user experience.
+
+
+
 import streamlit as st
 from datetime import datetime
 
